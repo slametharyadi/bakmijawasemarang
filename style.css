@@ -101,12 +101,13 @@ nav a:hover{
 }
 
 .main h1{
-    margin: 140px 0 10px 0;
+    margin-top:100px;
+    margin-bottom: 50px;
 }
 
 .main h1,p{
     font-weight: bold;
-    padding: 0 100px 0 100px;
+    padding: 20px;
     color: rgb(32, 32, 32);
 }
 /* akhir main */
@@ -129,7 +130,7 @@ nav a:hover{
 }
 
 .card img{
-    width: 80%;
+    width: 90%;
     height:180px ;
 }
 
@@ -148,7 +149,7 @@ nav a:hover{
     text-align: center;
     background-color: green;
     margin: auto;
-    height: 40px;
+    height: 80px;
     line-height: 40px;
 }
 
@@ -212,6 +213,7 @@ nav a:hover{
     height: 100vh;
     background-color:rgb(184, 100, 100);
     text-align: center;
+    margin-top: -1px;
 }
 
 .loc{
@@ -231,17 +233,11 @@ nav a:hover{
 }
 /* akhir location */
 
-footer{
-    height: 30px;
-    background-color: black;
+/* footer */
+footer p{
     text-align: center;
 }
-
-footer p{
-    line-height: 30px;
-}
-
-
+/* akhir footer */
 /* media query */
 @media (max-width: 273px){
     header{
@@ -249,3 +245,90 @@ footer p{
     }
     
 } 
+
+@media (max-width : 634px){
+    #navbar{
+        display: none;
+    }
+
+    .hero h1{
+        font-size: 2.3em;
+    }
+
+    .hero p{
+        font-size: 1.2em;
+        text-align: center;
+    }
+
+    .main h1{
+        font-size: 2em;
+        text-align: center;
+    }
+    .main p{
+        font-size: 1.3em;
+    }
+
+    .menu .katalog{
+        grid-template-columns:1fr 1fr;
+        margin-top: 20px;
+        gap: 40px;
+    }
+
+    .menu h1{
+        font-size: 2.3em;
+    }
+
+    .menu{
+        height: 1000px;
+    }
+
+    #form{
+        width: 80vw;
+    }
+}
+
+@media (max-width : 550px){
+    .location{
+        display: grid;
+        grid-template-columns:1fr;
+    }
+}
+@media (max-width : 480px){
+    .menu .katalog{
+        grid-template-columns:1fr;
+        margin-top: 40px;
+        gap: 40px;
+    }
+    .menu h1{
+        font-size: 2em;
+    }
+
+    .menu .card{
+        width: 95vw;
+        height: 400px;
+    }
+
+    .menu .card img{
+        height: 340px;
+    }
+
+    .menu{
+        height: 2400px;
+    }
+}
+@media (max-width : 416px){
+    .hero h1{
+        font-size: 2em;
+    }
+}
+
+@media (max-width : 362px){
+    .hero h1{
+        font-size: 1.5em;
+    }
+
+    .main h1{
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+}
