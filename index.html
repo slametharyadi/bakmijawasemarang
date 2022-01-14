@@ -22,13 +22,20 @@
                     <h1>Bakmi Jowo</h1>
                 </div>
         
-                <ul id="navbar">
+                <ul id="nav">
                     <li><a href="#tentang">TENTANG</a></li>
                     <li><a href="#menu">MENU</a></li>
                     <li><a href="#order">ORDER ONLINE</a></li>
                     <li><a href="#location">LOCATION</a></li>
                     <li><a href="#location">CONTACT</a></li>
                 </ul>
+
+                <div class="menu-toggle">
+                    <input type="checkbox">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </nav>
             <div class="hero">
                 <h1>BAKMI JOWO SEMARANG</h1>
@@ -145,34 +152,6 @@
     </div>
     <!-- akhir container -->
 
-    <script>
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbz6NDQmPL6I9eIayuFrVqaJ-OMEnR32_TfVwvEI7FRr8kPYZ0Ydh36GvAq8jt3W-BAkkA/exec'
-        const form = document.forms['pesanan-bakmi-jawa']
-        const tandaTerkirim = document.querySelector('.tandaterkirim');
-        const btnKirim = document.querySelector('.btn-kirim');
-        const btnLoading = document.querySelector('.btn-loading');
-
-      
-        form.addEventListener('submit', e => {
-          e.preventDefault()
-        //   ketika tombol submit di klik
-        // tampilkan tombol loading,hilangkan tombol kirim
-
-        btnLoading.classList.toggle('hilang');
-        btnKirim.classList.toggle('hilang');
-          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-        //   tampilkan tombol kirim hilangkan tombol loading
-            .then(response => {
-                btnLoading.classList.toggle('hilang');
-                btnKirim.classList.toggle('hilang');
-                // tampilkan alert
-                tandaTerkirim.classList.toggle('muncul');
-                // reset formnya
-                form.reset();
-                console.log('Success!', response)
-            })
-            .catch(error => console.error('Error!', error.message))
-        })
-      </script>
+    <script src="script.js"></script>
 </body>
 </html>
